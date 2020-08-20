@@ -10,30 +10,29 @@ Dutch Academic Hospital에서 수집된 real-life log로, 산부인과 환자들
 
 ### Attribute 설명
 - 아래와 같은 기존 변수, 파생 변수를 활용해 분석을 진행했다.
-
-1) Case
-  a) CaseID, 즉 환자의 ID라고 할 수 있다.
-  b) 0~1142의 값을 갖는다.
-  c) 가장 많은 event가 수행된 case ID는 824로, 해당 환자에 대해 1814개의 event가 수행되었다.
-2) Event
-  a) 환자의 진단/치료/검사를 위해 어떤 activity가 수행되었는지에 대한 기록이다.
-  b) 622개의 activity가 있다.
-3) Time
-  a) Timestamp, 시간이 기록되어 있지만 기본값을 가져 날짜만 의미가 있다고 볼 수 있다.
-  b) 환자의 첫 event timestamp부터 마지막 event timestamp가 환자의 치료 duration이 된다. Duration이 가장 긴 경우에는 3년 이상, 짧은 경우에는 1-day (당일)이다.
-4) Org
-  a) Activity를 수행한 담당한 진료과이다.
-  b) 총 43개의 부서가 존재하고, General Lab Clinical Chemistry가 전체 event log의 63% 이상을 수행했다.
-5) Diagnosis
-  a) 환자가 진단받은 병명의 집합이다.
-  b) 관측된 진단 병명의 조합으로 구성된 집합 종류는 총 209개로 나타났다.
-6) Diagnosis code
-  a) 환자의질병들에해당하는질병코드의집합이다.어떤종류의병을앓는지알수있다.
-  b) 관측된 진단 코드는 M11, M12, M13, M14, M15, M16, 106, 821, 822, 823, 839이다.
-  c) 진단 코드의 조합으로 구성된 집합 종류는 총 51개로 나타났다.
-7) Treatment code
-  a) 환자에게 행해진 치료에 대한 코드의 집합이다.
-  b) 치료 코드의 조합으로 구성된 집합 종류는 총 237개로 나타났다.
+1. Case
+   - CaseID, 즉 환자의 ID라고 할 수 있다.
+   - 0~1142의 값을 갖는다.
+   - 가장 많은 event가 수행된 case ID는 824로, 해당 환자에 대해 1814개의 event가 수행되었다.
+2. Event
+   - 환자의 진단/치료/검사를 위해 어떤 activity가 수행되었는지에 대한 기록이다.
+   - 622개의 activity가 있다.
+3. Time
+   - Timestamp, 시간이 기록되어 있지만 기본값을 가져 날짜만 의미가 있다고 볼 수 있다.
+   - 환자의 첫 event timestamp부터 마지막 event timestamp가 환자의 치료 duration이 된다. Duration이 가장 긴 경우에는 3년 이상, 짧은 경우에는 1-day (당일)이다.
+4. Org
+   - Activity를 수행한 담당한 진료과이다.
+   - 총 43개의 부서가 존재하고, General Lab Clinical Chemistry가 전체 event log의 63% 이상을 수행했다.
+5. Diagnosis
+   - 환자가 진단받은 병명의 집합이다.
+   - 관측된 진단 병명의 조합으로 구성된 집합 종류는 총 209개로 나타났다.
+6. Diagnosis code
+   - 환자의질병들에해당하는질병코드의집합이다.어떤종류의병을앓는지알수있다.
+   - 관측된 진단 코드는 M11, M12, M13, M14, M15, M16, 106, 821, 822, 823, 839이다.
+   - 진단 코드의 조합으로 구성된 집합 종류는 총 51개로 나타났다.
+7. Treatment code
+   - 환자에게 행해진 치료에 대한 코드의 집합이다.
+   - 치료 코드의 조합으로 구성된 집합 종류는 총 237개로 나타났다.
 
 ### 분석 방법
 - Control flow model
